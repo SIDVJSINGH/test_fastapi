@@ -43,11 +43,17 @@ config["USERINFO"] = {
     "password": "gogol"
 }
 
-config["SERVERCONFIG"] = {
+config["DEFAULT_CONFIG"] = {
     "host": "google.com",
     "port": "8080",
-    "ipaddr": "8.8.8.8"
+    "ipaddr": "8.8.8.8",
+    "service_account_filepath": "C:/Users/siddhant vijay singh/Downloads/sushant-calcium-sunbeam-341614-3db196fe803d.json",
+    "num_threds": "8"
 }
+
+# # REMOVING A SECTION
+config.remove_section("USERINFO")
+config.remove_section("USERINFO")
 
 with open('config.ini','w') as file:
     config.write(file)
