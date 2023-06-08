@@ -34,3 +34,20 @@ config.read("config.ini")
 # config.set('Employee','name', 'siddhant vijay singh')
 # with open('config.ini', 'w') as file :
 #     config.write(file)
+
+# Adding section, key and value pair in config file
+# This way you can add and change values anytime without setting section first
+config["USERINFO"] = {
+    "admin": "Siddhant",
+    "loginid": "sidvjsingh",
+    "password": "gogol"
+}
+
+config["SERVERCONFIG"] = {
+    "host": "google.com",
+    "port": "8080",
+    "ipaddr": "8.8.8.8"
+}
+
+with open('config.ini','w') as file:
+    config.write(file)
