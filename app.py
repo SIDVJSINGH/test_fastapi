@@ -37,11 +37,11 @@ config.read("config.ini")
 
 # Adding section, key and value pair in config file
 # This way you can add and change values anytime without setting section first
-config["USERINFO"] = {
-    "admin": "Siddhant",
-    "loginid": "sidvjsingh",
-    "password": "gogol"
-}
+# config["USERINFO"] = {
+#     "admin": "Siddhant",
+#     "loginid": "sidvjsingh",
+#     "password": "gogol"
+# }
 
 config["DEFAULT_CONFIG"] = {
     "host": "google.com",
@@ -52,8 +52,7 @@ config["DEFAULT_CONFIG"] = {
 }
 
 # # REMOVING A SECTION
-config.remove_section("USERINFO")
-config.remove_section("USERINFO")
+# config.remove_section("USERINFO")
 
 with open('config.ini','w') as file:
     config.write(file)
